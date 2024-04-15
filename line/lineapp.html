@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>LINE WEB APP</title>
+</head>
+<body>
+    <form action="http://localhost:8000/send_message" method="post">
+        <label for="message">メッセージ</label>
+        <input type="text" id="message" name="message"><br><br>
+        <input type="submit" value="メッセージを送信"><br><br>
+    </form>
+    <form action="http://localhost:8000/send_sticker" method="post">
+        <label for="package_id">パッケージid</label>
+        <input type="text" id="package_id" name="package_id"><br><br>
+        <label for="sticker_id">ステッカーID:</label>
+        <input type="text" id="sticker_id" name="sticker_id"><br><br>
+        <input type="submit" value="スタンプを送信"><br><br>
+    </form>
+    <form action="http://localhost:8000/send_image" method="post" enctype="multipart/form-data">
+        <label for="image">画像アップロード</label>
+        <input type="file" id="image" name="image"><br><br>
+        <input type="submit" value="画像の送信">
+    </form>
+</body>
+</html>
